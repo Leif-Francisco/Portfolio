@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Aircon Analysis Dashboard</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Leif</strong> <span>francisco</span></a>
+						
+					</header>
+
+				
+                <section id="banner" class="style7">
+						<div class="inner">
+							<span class="image">
+								<img src="images/air.png" alt="" />
+							</span>
+							<header class="major">
+								<h1>Aircon Analysis Dashboard</h1>   
+							</header>
+							<div class="content">
+							</div>
+						</div>
+					</section>
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+								
+								
+        								<h2> The Dashboard </h2>
+        								
+    									<div class="container">
+        									<embed src="images/Electricity.pdf" type="application/pdf" width="100%" height="600px"/>
+    									</div>
+    									
+    									<br><h2>Problem Statement</h2>
+    									<p>My Filipino mom always scolded me for using the Air Conditioner as a child. It became more of a display at some point. Recently, I wondered how expensive is using an Air Conditioner for an hour.
+    									I also wondered the energy cost comparison of an Aircon vs an Electric Fan. Is it more efficient to use four electric fans than to use an Aircon? Surprisingly, no one has made a visual report about this topic yet.
+    									
+    									<h2> Methodology </h2>
+    									<h4>Data Collection</h4>
+    									
+    									<p>The data were taken from estimates of official Meralco websites. The data were categorized into Brand Capacity (hp), Description Model, Est. Energy Consumption Per Hour (kWh) and, Es. Cost Per Hour (Php). 
+    									Most data were already provided in Meralco's data source, however
+        								unit cost was not included. I had to manually search for the unit costs using online sources.
+    									</p>
+    									
+    									<div class="container">
+        									<embed src="images/Meralco.pdf" type="application/pdf" width="100%" height="450px"/>
+    									</div>
+    									
+    									
+    									<br>
+    									<h4>Data Cleaning</h4>
+            								
+        								<p>I adjusted the power rate to P10.2 which is the current power rate. I removed the data where unit costs cannot be determined. I also removed null values and error values to avoid errors in Microsoft Power BI.
+        								Another problem I encountered was that I could not find the Philippine Peso in the Currency table which led me to convert the data to USD. 
+        								</p>
+        								
+        								<h4>Data Analysis</h4>
+        								
+        								<p>
+        								I computed the average energy cost per hour of 1 HP Aircon so that users have an understanding of how much it costs per hour and per month. The result suggests that the average cost per hour is $0.0704 (≈₱3.52). 
+        								Energy cost difference between 1 HP Aircon and Electric fan was computed by dividing the Average of Electric fan energy costs and the Average of 1 HP Aircon then 100 is divided by the result. The results suggest
+        								that the Aircon is 4.76x (476%) more expensive than the Electric Fan. Finally, when computing the energy efficiency difference of 1 HP inverter vs conventional Aircon, the Average of 1 HP Inverter energy costs and the Average of 1 HP Aircon, then 1 is subtracted to the result.
+        								The result suggests that using an inverter is 40.06% more cost efficient than conventional Aircons.
+
+        								</p>
+        								
+        								
+        								<h4>Data Visualization</h4>
+        								
+        								<div class="container">
+        									<embed src="images/Electricity.pdf" type="application/pdf" width="100%" height="600px"/>
+    									</div>
+    									
+        								
+        								<p>In my case, Data visualization came first before Data Analysis. I had to determine what information I should put in the dashboard and how the layout would be designed.
+        								I included graphs of unit cost by horsepower and estimated cost per hour by type.
+        								
+        								I also included splicers and strong visuals for this personal project. Splicers give the opportunity for users to filter information based on what they want to know. Unfortunately, the splicers and filters will not work because the file shown above is only a PDF due to restrictions in my Microsoft Account. 
+    									<br><br>If you want to take a look at the raw file including the working splicers and database, you can download it here: 
+        								
+        								
+    									
+        								</p>
+        								
+        								<ul class="actions">
+    									<li><a href="images/Electricity.pbix" download class="button"> Download File</a></li>
+        								</ul>
+        								
+        								<p>Hold 'Ctrl' and press left-click to choose numerous items in the splicer list.</p>
+        								
+    									<h2>Conclusion </h2>
+    									<h4>From the dashboard, the general results suggest that</h4>
+															<ul>
+																<li>$0.0704 (≈₱3.52) is the average energy cost per hour for 1 HP Aircon.</li>
+																<li>Energy cost in Aircon is 4.69x more expensive compared to Electric Fan. You could use four electric fans at once and the energy cost would still be cheaper.</li>
+																<li>40.06% energy cost is saved when using an Inverter.</li>
+															</ul>
+    									
+    									<h2> Insights </h2>
+    									<p>Overall, the project was fulfilling because I identified a problem and solved it using data analytics. It is important to take note that the data and output are all estimates. Real consumption data fluctuates based on different factors such as room temperature, increasing electricity price rates, different aircon models, wear and tear, etc.</p>
+						
+    								<p> Upon speculation, it seems that the cost per hour from the data of Meralco was low. It showed that the cost per hour is only around P4 while I was expecting a cost of around P8 per hour.     								
+    								The scenario reminded me of the importance of 'Garbage in, Garbage out'. If the data is wrong, the output will be wrong.
+    								Hence, data validation and data cleaning is an essential skill of a Data Analyst.
+    								
+    								</p>
+    								
+    								<p> References:<br>https://meralcomain.s3.ap-southeast-1.amazonaws.com/images/ckeditor-documents/Orange%20Tag%20Appliances%202019_Fans.pdf?null
+                                           https://meralcomain.s3.ap-southeast-1.amazonaws.com/images/ckeditor-documents/Air%20Conditioners%20June%202020_0.pdf?null&fbclid=IwAR3DB6jVL40iDofQT_xl19_klS5nVhRGH-DvxHJurbKPMrdo2Q-vREUmsPk      										
+    								</p> 								
+								</div>
+							</section>
+
+					</div>
+
+    				<footer id="footer">    				
+						<div class="inner">
+							<div class="col">
+							<header class="major">
+							<font size="2">
+        					<p>Phone: +(639)610840232
+        					<br>Email: <a href= "mailto:leif.francisco@yahoo.com"> leif.francisco@yahoo.com
+        					</font> 
+        					 </p>
+        					 </header> 
+							</ul>
+						</div>
+					</footer>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
